@@ -77,6 +77,7 @@ const app = new Vue({
                         break;
                     case 'previous':
                         return this.filmsPage > 1 && parseInt(this.filmsCount) > 10;
+                        break;
                 }
             } else if (collection === 'people') {
                 switch (type) {
@@ -84,13 +85,10 @@ const app = new Vue({
                         return this.peoplePage < (this.peopleCount / 10) + 1;
                         break;
                     case 'previous':
-                        console.log(this.peoplePage);
-                        console.log(this.peopleCount > 10);
-                        console.log(this.peoplePage > 1 && this.peopleCount > 10);
                         return this.peoplePage > 1 && this.peopleCount > 10;
+                        break
                 }
             }
-
         },
         reFetch(collection){
             switch(collection){

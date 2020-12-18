@@ -99,6 +99,13 @@
                                 <h3 class="post-subtitle">
                                     (Gender: {{ person.gender }})
                                 </h3>
+                                <p>Height: {{ person.height }}</p>
+                                <p>Mass: {{ person.mass }}</p>
+                                <p>Hair color: {{ person.hair_color }}</p>
+                                <p>Skin color: {{ person.skin_color }}</p>
+                                <p>Eye color: {{ person.eye_color }}</p>
+                                <p>Birth Year: {{ person.birth_year }}</p>
+                                <p>Homeworld: {{ person.homeworld }}</p>
                             </a>
                         </div>
                         <hr>
@@ -126,6 +133,26 @@
                             <p class="post-meta">Entry created: {{ film.created }}</p>
                             <p class="post-meta">Entry edited: {{ film.edited }}</p>
                             <p class="post-meta">Entry URL: {{ film.url }}</p>
+                            <h4>Characters:</h4>
+                            <ul>
+                                <li v-for="(character, index) in film.characters">{{ character }}</li>
+                            </ul>
+                            <h4>Planets:</h4>
+                            <ul>
+                                <li v-for="(planet, index) in film.planets">{{ planet }}</li>
+                            </ul>
+                            <h4>Starships:</h4>
+                            <ul>
+                                <li v-for="(starship, index) in film.starships">{{ starship }}</li>
+                            </ul>
+                            <h4>Vehicles:</h4>
+                            <ul>
+                                <li v-for="(vehicle, index) in film.vehicles">{{ vehicle }}</li>
+                            </ul>
+                            <h4>Species:</h4>
+                            <ul>
+                                <li v-for="(speciesItem, index) in film.species">{{ speciesItem }}</li>
+                            </ul>
                             <button class="btn btn-primary" @click="updateView('films')">Return</button>
                         </div>
                     </div>
@@ -139,9 +166,33 @@
                             <h3 class="post-subtitle">
                                 (Gender: {{ person.gender }})
                             </h3>
-                            <p>
-                                Homeworld: {{ person.homeworld}}
-                            </p>
+                            <p>Height: {{ person.height }}</p>
+                            <p>Mass: {{ person.mass }}</p>
+                            <p>Hair color: {{ person.hair_color }}</p>
+                            <p>Skin color: {{ person.skin_color }}</p>
+                            <p>Eye color: {{ person.eye_color }}</p>
+                            <p>Birth Year: {{ person.birth_year }}</p>
+                            <p>Homeworld: {{ person.homeworld }}</p>
+                            <h4>Films:</h4>
+                            <ul>
+                                <li v-for="(film, index) in person.films">{{ film }}</li>
+                            </ul>
+                            <h4>Planets:</h4>
+                            <ul>
+                                <li v-for="(planet, index) in person.planets">{{ planet }}</li>
+                            </ul>
+                            <h4>Starships:</h4>
+                            <ul>
+                                <li v-for="(starship, index) in person.starships">{{ starship }}</li>
+                            </ul>
+                            <h4>Vehicles:</h4>
+                            <ul>
+                                <li v-for="(vehicle, index) in person.vehicles">{{ vehicle }}</li>
+                            </ul>
+                            <h4>Species:</h4>
+                            <ul>
+                                <li v-for="(speciesItem, index) in person.species">{{ speciesItem }}</li>
+                            </ul>
                             <button class="btn btn-primary" @click="updateView('people')">Return</button>
                         </div>
                     </div>

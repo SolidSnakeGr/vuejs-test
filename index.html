@@ -106,6 +106,9 @@
                                 <p>Eye color: {{ person.eye_color }}</p>
                                 <p>Birth Year: {{ person.birth_year }}</p>
                                 <p>Homeworld: {{ person.homeworld }}</p>
+                                <p class="post-meta">Entry created: {{ person.created }}</p>
+                                <p class="post-meta">Entry edited: {{ person.edited }}</p>
+                                <p class="post-meta">Entry URL: {{ person.url }}</p>
                             </a>
                         </div>
                         <hr>
@@ -173,6 +176,9 @@
                             <p>Eye color: {{ person.eye_color }}</p>
                             <p>Birth Year: {{ person.birth_year }}</p>
                             <p>Homeworld: {{ person.homeworld }}</p>
+                            <p class="post-meta">Entry created: {{ person.created }}</p>
+                            <p class="post-meta">Entry edited: {{ person.edited }}</p>
+                            <p class="post-meta">Entry URL: {{ person.url }}</p>
                             <h4>Films:</h4>
                             <ul>
                                 <li v-for="(film, index) in person.films">{{ film }}</li>
